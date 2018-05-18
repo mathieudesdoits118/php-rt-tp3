@@ -96,5 +96,8 @@ class Organization{
 	 public function __toString(){
 		return $this->domain;
 	}
-
+	protected function users($users=null){
+		$title="Tous les utilisateurs";
+		return $this->loadView("Organizations/users.html",compact("users","title"),true);
+	}
 }
